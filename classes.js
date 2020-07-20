@@ -57,15 +57,15 @@ class Employee {
 */
 
 class Manager extends Employee {
-  constructor(first_name, last_name, email, age){
+  constructor(first_name, last_name, email, age, reports){
   super (first_name, last_name, email, age);
   this.reports = [];
 }
 hire(employee) {
-  reports.push(employee);
+  this.reports.push(employee);
 }
-fire(employee){
-  this.reports.splice(reports[employee], 1);
+fire(index){
+  this.reports.splice(index, 1);
 }
 }
 
@@ -96,6 +96,9 @@ class ProgressiveManager extends Manager {
     this.title = 'Not a manager';
     this.bonus = 0;
 }
+  hire(){
+    if()
+  }
 }
 
 
